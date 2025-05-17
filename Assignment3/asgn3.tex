@@ -1,0 +1,87 @@
+\documentclass{article} % working
+\def\inputGnumericTable{}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{wrapfig}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{amsmath}
+\usepackage{ifthen}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{\includegraphics[width=0.2\textwidth]{/storage/self/primary/practise/image/iiitb.jpg}}
+\fancyhead[R]{Azmathulla\\COMETFWC017}
+\fancyhead[C]{Assignment-3}
+
+
+
+\renewcommand{\headrulewidth}{0.4pt}
+\begin{document}
+\vspace*{2em}
+
+
+
+\noindent\textbf{\textcolor{cyan}{Example 8 : }}Divide $3x^2 - x^3 -3x  + 5 $ by $x - 1 - x^2.$
+
+\begin{wrapfigure}{r}{0.38\textwidth}\includegraphics[width=0.95\linewidth]{/storage/self/primary/practise/image/q8.png}
+%\caption{}
+\label{}
+\end{wrapfigure}
+
+\noindent\textbf{\textcolor{cyan}{Solution : }}  Note that the given polynomials are not in standard form. To carry out division, we first write both the dividend and divisor in decreasing orders of their degrees.So, dividend$ = –x^3 + 3x^2 – 3x + 5 $ and divisor$ = –x2 + x – 1$.\\
+Division process is shown on the right side.\\
+We stop here since degree $(3) = 0 < 2 = $ degree $(–x^2 + x – 1)$.So, quotient$ = x – 2$, remainder = 3.\\
+Now,
+
+\begin{center}
+Divisor $\times$  Quotient + Remainder
+\end{center}
+
+
+\vspace{-1cm}
+
+\begin{align*}
+  &=  (–x^2 + x – 1)(x-2) + 3\\
+  &= –x^3 + 3x^2 – 3x + 2 + 3\\
+  &= –x^3 + 3x^2 – 3x + 5\\
+  &= \text{Dividend} 
+\end{align*}
+
+\noindent In this way, the division algorithm is verified.\\
+
+
+
+
+
+\noindent\textbf{\textcolor[rgb]{0,0.502,0.753}{Example 9 : }}Find all the zeroes of $2x^4 - 3x^3 - 3x^2 + 6x - 2 $ , if you know two of the zeroes are $\sqrt{2}$ and $\sqrt{-2}$.\\
+\noindent\textbf{\textcolor[rgb]{0,0.502,0.753}{Solution : }} Since two of the zeroes are $\sqrt{2}$ and $-\sqrt{2}$, $(x - \sqrt{2})(x + \sqrt{2}) = x^2 - 2$ is a factor of the given polynomial.
+\\
+
+\begin{wrapfigure}{l}{0.3\textwidth}\includegraphics[width=0.95\linewidth]{/storage/self/primary/practise/image/q9.png}
+%\caption{}
+\label{}
+\end{wrapfigure}
+
+\noindent First term of the quotient is $\frac{2x^4}{x^2}=2x^2$
+
+\vspace{2em}
+\noindent Second term of the quotient is $\frac{-3x^3}{x^2}=-3x$
+
+\vspace{2em}
+\noindent Third term of the quotient is $\frac{x^2}{x^2}=1$
+\\
+
+
+
+
+
+
+\end{document}
