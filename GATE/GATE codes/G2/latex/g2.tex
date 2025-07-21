@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\geometry{margin=1in}
+\title{Implementation of Boolean Logic Using Arduino}
+\author{K. Azmathulla\\\texttt{iamazmath771@gmail.com}\\COMET.FWC17\\Future Wireless Communication (FWC)}
+\date{Assignment\\July 07, 2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\includegraphics[width=0.9\linewidth]{g2m.jpg} \\[0.5em]
+(GATE 2010 CS, Question No.9 – Implementing an answer of the above question using Arduino)
+\end{abstract}
+
+\section{Components}
+
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Component} & \textbf{Qty} \\
+\hline
+Arduino UNO Board & 1 \\
+USB Cable (Type B) & 1 \\
+Push Buttons & 3 \\
+LEDs & 1 \\
+220$\Omega$ Resistors & 3 \\
+Jumper Wires (M-M) & 10 \\
+Breadboard & 1 \\
+Android Mobile with Arduinodroid App & 1 \\
+\hline
+\end{tabular}
+
+\section{Setup and Connections}
+\begin{enumerate}
+    \item Connect push buttons to D2, D3, D4 for P, Q, R.
+    \item Add pull-down resistors to each input.
+    \item Connect an LED to pin D13 via a 220$\Omega$ resistor.
+    \item Common ground for buttons and LED.
+    \item Power Arduino via USB and Arduinodroid app.
+\end{enumerate}
+
+\section{Steps for Implementation}
+\begin{enumerate}
+    \item Complete the circuit connections.
+    \item Connect Arduino to mobile via USB.
+    \item Open Arduinodroid, select board and port.
+    \item Open, save, compile and upload code.
+\end{enumerate}
+
+\section{Truth Table}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+P & Q & R & F \\
+\hline
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Implementation}
+\begin{align*}
+f &= P \bar{Q} R + P Q \bar{R} + \bar{P} Q R + \bar{P} \bar{Q} \bar{R} \\
+  &= P (QR + \bar{Q} R) + \bar{P}(Q \bar{R} + \bar{Q} R) \\
+  &= P(Q \oplus R) + \bar{P}(Q \oplus R)' \\
+  &= P \oplus (Q \oplus R) \\
+  &= f = P \oplus Q \oplus R
+\end{align*}
+
+\section{Input and Output Pins}
+\begin{itemize}
+    \item \textbf{P (Input)} – D2
+    \item \textbf{Q (Input)} – D3
+    \item \textbf{R (Input)} – D4
+    \item \textbf{F (Output LED)} – D13
+\end{itemize}
+
+\includegraphics[width=0.9\linewidth]{g2m1.png} \\[0.5em]    
+
+\end{document}

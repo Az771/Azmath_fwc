@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{url}
+
+\setlength{\columnsep}{1cm}
+
+\begin{document}
+
+% Title Block
+\begin{center}
+    \textbf{\Large IMPLEMENTATION OF BOOLEAN LOGIC USING ARDUINO} \\[10pt]
+    \textbf{K. Azmathulla} \\
+    \texttt{iamazmath771@gmail.com} \\
+    \textbf{COMET.FWC017} \\
+    \textbf{Future Wireless Communication (FWC)} \\
+    \textbf{ASSIGNMENT} \\[5pt]
+    July 07, 2025
+\end{center}
+\vspace{1em}
+
+\begin{multicols}{2}
+
+% Abstract
+\noindent\textbf{Abstract} \\[0.5em]
+\includegraphics[width=0.9\linewidth]{image.png} \\[0.5em]
+\textit{(GATE 2010, Question No.6: The minterm expression of f(P,Q,R) = PQ + QR' + PR' is ? By using Arduino)}
+
+\vspace{1em}
+\noindent\textbf{1. Components}
+\begin{table}[H]
+\small
+\centering
+\begin{tabular}{|p{4.2cm}|c|}
+\hline
+\textbf{Component} & \textbf{Qty} \\
+\hline
+Arduino UNO Board & 1 \\
+USB Cable (Type B) & 1 \\
+Push Buttons & 3 \\
+LEDs & 1 \\
+220$\Omega$ Resistors & 3 \\
+Jumper Wires (M-M) & 10 \\
+Breadboard & 1 \\
+Android Mobile with Arduinodroid App & 1 \\
+\hline
+\end{tabular}
+\caption*{Table 1: List of components used}
+\end{table}
+
+\vspace{1em}
+\noindent\textbf{2. Setup and Connections}
+\begin{enumerate}
+    \item Connect push buttons to D2, D3, D4 for P, Q, R.
+    \item Add pull-down resistors to each input.
+    \item Connect an LED to pin D13 via a 220$\Omega$ resistor.
+    \item Common ground for buttons and LED.
+    \item Power Arduino via USB and Arduinodroid app.
+\end{enumerate}
+
+\vspace{1em}
+\noindent\textbf{3. Steps for Implementation}
+\begin{enumerate}
+    \item Complete the circuit connections.
+    \item Connect Arduino to mobile via USB.
+    \item Open Arduinodroid, select board and port.
+    \item Open, save, compile and upload code.
+\end{enumerate}
+
+\vspace{1em}
+\noindent\textbf{4. Truth Table}
+\[
+\begin{array}{|c|c|c|c|}
+\hline
+P & Q & R & F \\
+\hline
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 1 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{array}
+\]
+
+\end{multicols}
+
+\vspace{1em}
+\noindent\textbf{5. Boolean Expression Simplification}
+\begin{flushleft}
+F &= PQ + PR' + Q R'
+
+\end{flushleft}
+
+\vspace{1em}
+\noindent\textbf{6. Input and Output Pins}
+\begin{flushleft}
+\begin{itemize}
+    \item \textbf{P (Input)} – D2
+    \item \textbf{Q (Input)} – D3
+    \item \textbf{R (Input)} – D4
+    \item \textbf{F (Output LED)} – D13
+\end{itemize}
+\end{flushleft}
+
+\vspace{1em}
+\begin{figure}[H]
+\includegraphics[width=0.5\linewidth]{image1.jpg}
+\end{figure}
+
+\end{document}
+
